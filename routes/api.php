@@ -33,7 +33,7 @@ Route::post('/categories/update/{id}',[CategoriesAPIController::class, 'update']
 Route::post('/categories/hapus/{id}',[CategoriesAPIController::class, 'hapus'])->name('api.hapuscategories');
 
 
-//
+
 //Route::get('/articles/detail/{title_url}',[ArticlesAPIController::class, 'articles'])->name('api.articles.detail'); //detail artikel berdasarkan url
 //Route::any('/articles/tambah',[ArticlesAPIController::class, 'articles'])->name('api.articles');
 // Route::post('/articles/update',[ArticlesAPIController::class, 'articles'])->name('articles');
