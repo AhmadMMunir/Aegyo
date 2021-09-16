@@ -24,7 +24,7 @@
 							<tr>
 								<td>{{ $p->id }}</td>
 								<td>{{ $p->nama }}</td>
-								<td>http://localhost:9000/articles/{{ $p->nama_url }}</td>
+								<td>http://localhost:9000/{{ $p->nama_url }}</td>
 								<td>
 									<a href="/categories/ubah/{{ $p->id}}">Ubah</a>
 									|
