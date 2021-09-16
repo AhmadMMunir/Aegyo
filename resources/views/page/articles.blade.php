@@ -29,7 +29,7 @@
 							
 							<td>{{ $p->categories_nama}}</td>
 							<td>{{ $p->title }}</td>
-							<td>http://localhost:9000/articles/{{ $p->title_url }}</td>
+							<td>http://localhost:9000/{{ $p->nama_url }}/read/{{ $p->title_url }}</td>
 							<td>{{ $p->description }}</td>
 							<td>{{ $p->content }}</td>
 							<td>

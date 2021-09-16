@@ -15,7 +15,7 @@ class ArticlesController extends Controller
     public function articles(Request $request)
     {
     	// mengambil data dari table articles
-    	$articles = Articles::select('articles.id','category_id','nama as categories_nama','title','title_url','description','content')
+    	$articles = Articles::select('articles.id','category_id','nama as categories_nama','title','nama_url','title_url','description','content')
             ->leftJoin('categories', 'categories.id', '=', 'articles.category_id')
             ->get();
         
