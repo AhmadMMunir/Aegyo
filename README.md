@@ -1,7 +1,5 @@
 # Test Aegyo
 
-test
-
 ## Cara Menjalankan Aplikasi
 
 `php artisan serve`
