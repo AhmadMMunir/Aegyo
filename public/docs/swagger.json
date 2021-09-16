@@ -1,0 +1,382 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "This is a sample server Aegyo server.",
+      "version": "1.0.5",
+      "title": "Swagger Article API"
+    },
+    "host": "localhost:9000",
+    "basePath": "/api",
+    "tags": [
+      {
+        "name": "Articles",
+        "description": "Everything about your Articles"
+      },
+      {
+        "name": "Categories",
+        "description": "Everything about your Categories"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+
+        "/articles": {
+            "get": {
+              "tags": [
+                "Articles"
+              ],
+              "summary": "List Articles",
+              "description": "List articles",
+              "operationId": "ListArticles",
+              "produces": [
+                "application/json",
+                "application/xml"
+              ],
+              "responses": {
+                "200": {
+                  "description": "successful operation"
+                },
+                "400": {
+                  "description": "Invalid status value"
+                }
+              }
+            }
+          },
+
+
+    
+      "/articles/simpan": {
+        "post": {
+          "tags": [
+            "Articles"
+          ],
+          "summary": "Simpan article",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "category_id",
+              "in": "formData",
+              "description": "id_category artikel",
+              "required": true,
+              "type": "integer"
+            },
+            {
+              "name": "title",
+              "in": "formData",
+              "description": "judul untuk artikel",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "content",
+              "in": "formData",
+              "description": "content artikel",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "in": "formData",
+              "description": "deskripsi artikel",
+              "required": true,
+              "type": "string"
+            }
+
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+
+      "/articles/update/{id}": {
+        "post": {
+          "tags": [
+            "Articles"
+          ],
+          "summary": "Update article",
+          "description": "Update Article",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id_category",
+              "in": "formData",
+              "description": "id_category artikel",
+              "required": true,
+              "type": "integer"
+            },
+            {
+              "name": "title",
+              "in": "formData",
+              "description": "judul untuk artikel",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "content",
+              "in": "formData",
+              "description": "content artikel",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "description",
+              "in": "formData",
+              "description": "deskripsi artikel",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+
+      
+      "/api/{title_url}": {
+        "post": {
+          "tags": [
+            "Articles"
+          ],
+          "summary": "Detail articles",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            
+            "application/json",
+            "application/xml"
+          ],
+          "parameters": [
+            {
+              "name": "title_url",
+              "in": "formData",
+              "description": "title Url",
+              "required": true,
+              "type": "string"
+            }
+
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+
+      
+
+
+      "/articles/hapus/{id}": {
+        "post": {
+          "tags": [
+            "Articles"
+          ],
+          "summary": "Hapus Articles",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "formData",
+              "description": "id articles",
+              "required": true,
+              "type": "integer"
+            }
+
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+        },
+
+
+
+      "/categories": {
+        "get": {
+          "tags": [
+            "Categories"
+          ],
+          "summary": "List Categories",
+          "description": "List articles",
+          "operationId": "ListArticles",
+          "produces": [
+            "application/json",
+            "application/xml"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid status value"
+            }
+          }
+        }
+      },
+      "/categories/simpan": {
+        "post": {
+          "tags": [
+            "Categories"
+          ],
+          "summary": "Simpan categories",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "formData",
+              "description": "id categories",
+              "required": true,
+              "type": "integer"
+            },
+            {
+              "name": "nama",
+              "in": "formData",
+              "description": "nama categories",
+              "required": true,
+              "type": "string"
+            }
+
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+
+      "/categories/update/{id}": {
+        "post": {
+          "tags": [
+            "Categories"
+          ],
+          "summary": "Update categories",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "formData",
+              "description": "id categories",
+              "required": true,
+              "type": "integer"
+            },
+            {
+              "name": "nama",
+              "in": "formData",
+              "description": "nama categories",
+              "required": true,
+              "type": "string"
+            }
+
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      },
+
+      "/categories/hapus/{id}": {
+        "post": {
+          "tags": [
+            "Categories"
+          ],
+          "summary": "Hapus categories",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "formData",
+              "description": "id categories",
+              "required": true,
+              "type": "integer"
+            }
+
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+        }
+
+    }
+
+
+    
+
+
+    
+    
+
+  }
