@@ -6,7 +6,9 @@
 
 kemudian bisa akses [localhost:9000](http://localhost:9000)
 
-User yang disediakan : user@gmail.com 
+## User Yang disediakan saat menjalankan aplikasi
+
+User : user@gmail.com 
 Password : password
 
 ### Melihat dokumentasi API
